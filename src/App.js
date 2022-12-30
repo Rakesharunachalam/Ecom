@@ -5,7 +5,7 @@ import Cart from './Cart';
 import './App.css';
 import { useState } from 'react';
 function App() {
-
+console.log("working")
   const [cart,setCart] = useState([]);
 
   return (
