@@ -1,38 +1,279 @@
-.App {
-  text-align: center;
+@font-face {
+    font-family: myfont;
+    src: url(assests/Poppins/Poppins-Regular.ttf);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+    margin: 0;
+    padding: 0;
+    font-family: myfont;
+}
+body{
+    width: 100%;
+}
+.navbar {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    height: 70px;
+    background-color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 2;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.navbar img {
+    height: 80%;
+}
+
+.nav-links {
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 5vw;
+    align-items: center;
+}
+
+.cc {
+    display: flex;
+    align-items: center;
+}
+.cc p{
+    margin-bottom: 1.5vh;
+    margin-left: .1vh;
+    background-color: rgb(193, 255, 87);
+    color: black;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+
+}
+
+.nav-links a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+.banner{
+    width: 100%;
+    height: 650px;
+    background-image: url(assests/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
   }
+  .banner .content{
+    width: 50%;
+    color: #fff;
+    font-size: 1.3rem;
+  left: 5vw;
+  top: 25%;
+  position: absolute;
+  }
+  .buynow{
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: none;
+  font-size: 1rem;
+  margin-top: 3vh;
+  cursor: pointer;
+  }
+  .buynow:hover{
+    background-color: black;
+    color: white;
+  }
+  .products{
+    width: 100%;
+    background-color: rgb(218, 218, 218);
+    margin: 1px auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 0px 20px;
+ }
+ .maincard{
+     width: 300px;
+     height: 420px;
+     background-color: #FFDB58;
+     border: 1px solid black;
+     border-radius: 5px;
+     overflow: hidden;
+     padding: 10px;
+     margin: 40px 20px;
+ }
+ .cardimage{
+     width: 100%;
+     max-width: 300px;
+     height: 280px;
+     display: block;
+     object-fit: cover;
+ }
+ .cardname{
+     text-transform: uppercase;
+     margin: 10px 0;
+ }
+ .cardprice{
+    margin: 10px 0;
+    font-size: 18px;
+ }
+ .addcart{
+     font-weight: 700;
+     font-size: 18px;
+     border-radius: 5px;
+     border: none;
+     outline: none;
+     background-color: white;
+     color: black;
+     width: 100%;
+     height: 40px;
+     display: block;
+     cursor: pointer;
+     text-transform: uppercase;
+     margin: 10px auto;
+ }
+ .addcart:hover{
+     background-color: black;
+     color: white;
+ }
+ .addcart:active{
+     transform: translateY(2px);
+ }
+ .maincart{
+  height: fit-content;
+  width: 50%;
+  background-color: #FFDB58;
+  margin: auto;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.orders{
+  width: 60%;
+  height:90%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  max-height: fit-content;
+  background-color:white;
+  margin: auto;
+  border-radius: 5px;
+  border: solid rgb(95, 95, 95) 2px;
+  overflow: hidden;
   }
-  to {
-    transform: rotate(360deg);
+  .orders .tittle{
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
   }
-}
+  .total-price{
+    height: 10%;
+    width: 100%;
+    background-color: rgb(201, 201, 201);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .orderd-items{
+    width: 90%;
+    height: fit-content;
+    margin: auto;
+    padding: 0 5%;
+    overflow-y: auto;
+    background-color: white;
+  }
+  .cart-items div:first-child{
+    width:30%;
+  }
+  .cart-items > div:last-child{
+    width:70%;
+    box-sizing: border-box;
+    padding: 0px 0px 0px 30px;
+  }
+  .incre-decre{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .incre-decre .incre-btn{
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+  }
+  .incre-decre .incre-btn button{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .incre-decre .incre-btn h3{
+    min-width:50px;
+    height:50px;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFDB58;
+  }
+  .incre-decre button{
+    width:fit-content;
+    height:fit-content;
+    padding: 7px;
+    border-radius: 7px;
+    border:solid black 1px;
+    cursor: pointer;
+  }
+  .cart-items{
+    width: 100%;
+    height: fit-content;
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    border-bottom: solid rgb(0, 0, 0) 1px;
+  }
+  .cart-items h1{
+    font-size: 1rem;
+  }
+  .cart-items img{
+    height: 100px;
+  }
+  .remove{
+    padding: 5px 10px;
+    background-color: red;
+    color: white;
+    outline: none;
+    border: none;
+  }
+  .footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+  }
+  .footer_tittle{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .footer_socials{
+    margin-bottom: 2rem;
+  }
+  .footer-icon{
+    font-size: 1.5rem;
+    color: white;
+    margin: 0 1rem;
+  }
+
+
+ 
